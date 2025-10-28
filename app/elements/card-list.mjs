@@ -1,20 +1,13 @@
 export default function CardList({ html }) {
   return html`
-    <style>
-      :host {
-        min-height: 100vh;
-        display: block;
-      }
-
-      /* This will style your h1 */
-      ::slotted(h1) {
-        color: blue;
-        font-size: 2rem;
-        font-weight: bold;
-      }
-    </style>
-    <article>
-      <slot slot=""></slot>
-    </article>
+    <ul class="card-list">
+      <li>
+        <a href="">
+          <article>
+            <h2>Add a new <span>presentation</span></h2>
+          </article>
+        </a>
+      </li>
+    </ul>
   `;
 }

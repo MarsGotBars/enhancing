@@ -3,5 +3,9 @@
   "discord-logo.svg": "discord-logo-4840122a2d.svg",
   "enhance-type.svg": "enhance-type-87156073bb.svg",
   "favicon.svg": "favicon-b4ff6ad92f.svg",
-  "styles/general.css": "styles/general-9b32d54498.css"
+  "fonts/notoserif.woff2": "fonts/notoserif-b1bab72f50.woff2",
+  "styles/about.css": "styles/about-da39a3ee5e.css",
+  "styles/general.css": "styles/general-edacf43988.css",
+  "styles/home.css": "styles/home-9cd0a245a3.css",
+  "styles/motion/home--motion.css": "styles/motion/home--motion-104f65b1fd.css"
 }

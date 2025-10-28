@@ -1,11 +1,76 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-weight: 400;
-    text-decoration: none;
+/* MARK: Fonts 
+*/
+
+@font-face {
+  font-family: "Noto";
+  src: url("/_public/fonts/notoserif.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
-body{
-    background: darkgray;
+body {
+  --bg-color: #0d1f12;
+  --text-color: #9bc068;
+  --tertiary: #f5eed6;
+  --quaternary: #4a7c2f;
+
+  color: var(--text-color);
+  background: var(--bg-color);
+  font-family: Noto, sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.125rem;
+  padding-block: 3rem;
+  padding-inline: 1.375rem;
+
+  @media (min-width: 51.25rem) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  > * {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 102.5rem;
+    grid-column: 1 / -1;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 5rem);
+  }
+
+  h2 {
+    color: var(--tertiary);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+input {
+  line-height: 1.15;
+  max-width: 70ch;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+span {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  color: var(--tertiary);
 }
