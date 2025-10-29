@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "npx enhance dev",
+    "start": "node server.mjs",
     "lint": "eslint ./app/**/*.mjs --fix",
     "enhance": "enhance"
   },
