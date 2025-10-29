@@ -1,7 +1,17 @@
-import arc from '@architect/functions'
+import express from 'express';
+import arc from '@architect/functions';
 
-const app = arc.http.async()
+const app = express();
 
-console.log('Server started! Listening for requests…')
+// Let Architect routes handle HTTP requests
+app.all('*', (req, res) => {
+  // Just call async handler, no need to await
+  arc.http.async(req, res).catch(err => {
+    console.error(err);
+    if (!res.headersSent) res.status(500).send('Internal Server Error');
+  });
+});
 
-export default app
+// Use Render port or default 3333
+const port = process.env.PORT || 3333;
+app.listen(port, () => console.log(`Server listening on http://localhost:${port}`));
